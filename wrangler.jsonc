@@ -1,0 +1,10 @@
+// Cloudflare Workers configuration for the website: a static site, no Worker script.
+// `bun run build` writes the site to dist/, and `wrangler deploy` uploads it.
+// The name must match the Worker's name in the Cloudflare dashboard.
+{
+  "name": "panda-studio",
+  "compatibility_date": "2026-11-15",
+  "assets": {
+    "directory": "./dist",
+  },
+}
