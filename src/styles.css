@@ -95,6 +95,8 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var
   padding: .55rem .9rem; border: 1px solid var(--line); border-radius: 999px; background: color-mix(in srgb, var(--panel) 60%, transparent);
   backdrop-filter: blur(8px);
 }
+/* Phones list the platforms right under the buttons, so the eyebrow stays short. */
+@media (max-width: 480px) { .eyebrow-os { display: none; } }
 .eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 12px var(--accent); animation: pulse 2s ease-in-out infinite; }
 @keyframes pulse { 50% { opacity: .35; } }
 
@@ -415,6 +417,47 @@ section { position: relative; }
 .outro .marker::after { left: 50%; }
 .dl-meta { margin: 1.6rem 0 .4rem; font: 500 .82rem var(--mono); color: var(--dim); }
 .outro .fine { margin-inline: auto; }
+
+/* The download line: each piece stays whole; the line breaks between pieces. */
+.hero-meta [data-download-meta], .dl-meta { white-space: normal; }
+.hero-meta span, .dl-meta span { white-space: nowrap; }
+.meta-exp { color: var(--accent); }
+.other-os { margin-left: .6rem; white-space: nowrap; }
+/* A system we can't detect (phones, tablets): the buttons lead to the list, so no extra lines. */
+[data-os="other"] .other-os, [data-os="other"] .outro-dl, [data-os="other"] .outro-dl-meta { display: none; }
+
+/* ---------- one card per platform ---------- */
+.platforms {
+  display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.1rem;
+  width: min(68rem, 100%); margin: 3.4rem 0 1.6rem; text-align: left; scroll-margin-top: calc(var(--tp-h) + 2rem);
+}
+[data-os="other"] .platforms { margin-top: 0; }
+.platform {
+  display: flex; flex-direction: column; gap: .7rem; padding: 1.3rem 1.3rem 1.2rem; border-radius: var(--radius);
+  background: color-mix(in srgb, var(--panel) 88%, transparent); border: 1px solid var(--line);
+  backdrop-filter: blur(8px); transition: border-color .4s, transform .5s var(--ease), box-shadow .5s;
+}
+.platform:hover { transform: translateY(-4px); border-color: rgba(var(--accent-rgb), .45); }
+.platform.is-yours { border-color: rgba(var(--accent-rgb), .7); box-shadow: 0 30px 70px -40px rgba(var(--accent-rgb), var(--glow)); }
+.platform-head { display: flex; align-items: center; gap: .65rem; }
+.platform-head h3 { margin: 0; font: 400 1.9rem/1 var(--serif); }
+.platform-icon { width: 26px; height: 26px; color: var(--text); flex: none; }
+.platform-icon svg { width: 100%; height: 100%; fill: currentColor; }
+.platform-icon .cut { fill: var(--panel); }
+.platform-icon .acc { fill: var(--accent); }
+.badge-exp {
+  margin-left: auto; font: 600 .62rem/1 var(--mono); letter-spacing: .1em; text-transform: uppercase;
+  padding: .38rem .5rem; border-radius: 5px; color: var(--accent); border: 1px solid rgba(var(--accent-rgb), .5);
+}
+.platform-req { margin: 0; font: 500 .76rem var(--mono); color: var(--text); }
+.platform-how { margin: 0; color: var(--dim); font-size: .88rem; line-height: 1.55; flex: 1; }
+.platform-how b { color: var(--text); font-weight: 600; }
+.platform-foot { display: flex; align-items: center; justify-content: space-between; gap: .8rem; padding-top: .9rem; border-top: 1px solid var(--line); }
+.platform-meta { font: 500 .72rem var(--mono); color: var(--dim); }
+.platform.is-yours .platform-dl { background: var(--accent); color: var(--on-accent); border-color: transparent; }
+.platform-note { max-width: 44rem !important; }
+.platform-note b { color: var(--text); }
+@media (max-width: 900px) { .platforms { grid-template-columns: 1fr; max-width: 30rem; } }
 
 .foot {
   display: flex; flex-wrap: wrap; gap: 1rem; justify-content: space-between; align-items: center;

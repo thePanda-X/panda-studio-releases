@@ -9,7 +9,7 @@ export function makeCanvas(el) {
     c.setTransform(o.dpr, 0, 0, o.dpr, 0, 0);
   };
   size();
-  addEventListener("resize", size);
+  new ResizeObserver(size).observe(el); // its own size, not just the window's
   new IntersectionObserver(([e]) => (o.visible = e.isIntersecting)).observe(el);
   return o;
 }

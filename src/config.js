@@ -1,12 +1,41 @@
 // The one place to update when a new version is published.
-// Copy version, size and url from the studio's dist/latest.json after running the release script.
-export const RELEASE = {
-  version: "0.1.1",
-  sizeBytes: 5994605,
-  url: "https://github.com/thePanda-X/panda-studio-releases/releases/download/v0.1.1/PandaStudio-Setup-0.1.1.exe",
-  // Page listing every release (the "All versions" link).
-  releasesPage: "https://github.com/thePanda-X/panda-studio-releases/releases",
+//
+// Each platform has its own version: a Windows-only release leaves macOS and Linux on their
+// last build. After a release, set each platform's `version` to what its update file says
+// (dist/latest.json for Windows, latest-macos.json, latest-linux.json), and `sizeBytes` to its
+// "size" (leave it out to hide the size). File names follow the release script's patterns.
+
+const REPO = "https://github.com/thePanda-X/panda-studio-releases";
+
+export const PLATFORMS = {
+  windows: {
+    name: "Windows",
+    version: "1.0.0",
+    sizeBytes: 6199740,
+    file: (v) => `PandaStudio-Setup-${v}.exe`,
+    requires: "Windows 10 & 11 (64-bit)",
+    experimental: false,
+  },
+  macos: {
+    name: "macOS",
+    version: "1.0.0",
+    sizeBytes: 12817233,
+    file: (v) => `PandaStudio-${v}-macos.dmg`,
+    requires: "macOS 11 or newer · Apple silicon & Intel",
+    experimental: true,
+  },
+  linux: {
+    name: "Linux",
+    version: "1.0.0",
+    sizeBytes: 8002040,
+    file: (v) => `PandaStudio-${v}-linux-x86_64.AppImage`,
+    requires: "x86-64 · AppImage",
+    experimental: true,
+  },
 };
+
+export const downloadUrl = (p) => `${REPO}/releases/download/v${p.version}/${p.file(p.version)}`;
+export const RELEASES_PAGE = `${REPO}/releases`;
 
 // The page is laid out like a song this many bars long: scrolling to the bottom reaches its end.
 export const SONG_BARS = 16;

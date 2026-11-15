@@ -3,15 +3,17 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/thePanda-X/panda-studio-releases/releases/latest"><img alt="Download for Windows" src="https://img.shields.io/badge/Download-Windows%2010%20%26%2011-f6b3cb?style=for-the-badge&logo=windows&logoColor=f6b3cb&labelColor=1d1d22" /></a>
-  <a href="https://github.com/thePanda-X/panda-studio-releases/releases/latest"><img alt="Latest version" src="https://img.shields.io/github/v/release/thePanda-X/panda-studio-releases?style=for-the-badge&label=version&color=c4a8f4&labelColor=1d1d22" /></a>
+  <a href="https://github.com/thePanda-X/panda-studio-releases/releases/latest"><img alt="Download for Windows" src="https://img.shields.io/badge/Windows-Download-f6b3cb?style=for-the-badge&logo=windows&logoColor=f6b3cb&labelColor=1d1d22" /></a>
+  <a href="https://github.com/thePanda-X/panda-studio-releases/releases/latest"><img alt="Download for macOS (experimental)" src="https://img.shields.io/badge/macOS-experimental-c4a8f4?style=for-the-badge&logo=apple&logoColor=c4a8f4&labelColor=1d1d22" /></a>
+  <a href="https://github.com/thePanda-X/panda-studio-releases/releases/latest"><img alt="Download for Linux (experimental)" src="https://img.shields.io/badge/Linux-experimental-c4a8f4?style=for-the-badge&logo=linux&logoColor=c4a8f4&labelColor=1d1d22" /></a>
+  <a href="https://github.com/thePanda-X/panda-studio-releases/releases/latest"><img alt="Latest version" src="https://img.shields.io/github/v/release/thePanda-X/panda-studio-releases?style=for-the-badge&label=version&color=9cb8f0&labelColor=1d1d22" /></a>
   <img alt="Free" src="https://img.shields.io/badge/price-free-9ae0b4?style=for-the-badge&labelColor=1d1d22" />
 </p>
 
 <p align="center">
-  <b>Panda Studio is a free, pattern-based music studio for Windows.</b><br />
+  <b>Panda Studio is a free, pattern-based music studio for Windows, macOS and Linux.</b><br />
   Tap out drums, draw 808 slides, arrange, mix, and sing over it.<br />
-  All of it fits in a 6&nbsp;MB download.
+  Native, light (a 6&nbsp;MB installer on Windows) and free.
 </p>
 
 <p align="center">
@@ -33,11 +35,18 @@
 
 ## Get started in a minute
 
-1. **Download** `PandaStudio-Setup-<version>.exe` from the [latest release](https://github.com/thePanda-X/panda-studio-releases/releases/latest).
-2. **Run it.** It installs just for you (no admin rights needed) and adds Start menu and desktop shortcuts.
-3. **Press Space.** The studio opens with a demo song loaded, ready to play, take apart and remix.
+Grab the file for your system from the **[latest release](https://github.com/thePanda-X/panda-studio-releases/releases/latest)**, install it, then **press Space**: the studio opens with a demo song loaded, ready to play, take apart and remix.
 
-Needs Windows 10 or 11, 64-bit. Panda Studio checks for updates once a day and installs them for you when you say so.
+| | Download | Install | Needs |
+|---|---|---|---|
+| **Windows** | `PandaStudio-Setup-<version>.exe` | Run it. It installs just for you (no admin rights needed) and adds Start menu and desktop shortcuts. | Windows 10 or 11, 64-bit |
+| **macOS** <br /><sub>experimental</sub> | `PandaStudio-<version>-macos.dmg` | Open it and drag Panda Studio into Applications. The first time, right-click it and choose **Open** ([more](#macos-says-panda-studio-cant-be-opened)). | macOS 11 or newer, Apple silicon or Intel |
+| **Linux** <br /><sub>experimental</sub> | `PandaStudio-<version>-linux-x86_64.AppImage` | Make it executable (`chmod +x`) and open it. One file, no install. | x86-64, a desktop with ALSA, PipeWire or PulseAudio |
+
+Panda Studio checks for updates once a day and installs them for you when you say so, on all three systems.
+
+> [!NOTE]
+> Panda Studio is made and tested on **Windows**. The **macOS** and **Linux** versions are **experimental**: the same studio with the same features, but expect some rough edges.
 
 ---
 
@@ -62,7 +71,7 @@ Every part of the studio is a window you can float, dock, maximise or close. **F
     <td width="50%" valign="top">
       <img src="src/assets/shots/playlist.webp" alt="The playlist: pattern clips, audio clips and an automation clip arranged over 16 bars with Intro, Drop and Build-up markers." />
       <h3>Playlist <kbd>F5</kbd></h3>
-      Arrange pattern clips, audio clips and automation clips on tracks. Drop audio from Explorer right onto the bar you want, and right-drag the ruler to loop a region.
+      Arrange pattern clips, audio clips and automation clips on tracks. Drop audio from your file manager right onto the bar you want, and right-drag the ruler to loop a region.
     </td>
     <td width="50%" valign="top">
       <img src="src/assets/shots/mixer.webp" alt="The mixer with strips for kick, clap, hats, 808, guitar and more, and the master's effect slots and EQ." />
@@ -101,7 +110,7 @@ Every part of the studio is a window you can float, dock, maximise or close. **F
 | **Modulation** | Chorus · Phaser · Flanger · Auto Pan · Stereo Tool |
 | **Sound design** | Frequency Shifter · Ring Mod · Resonator · Trance Gate · Tape Stop · Grain Cloud · Half Time |
 
-**Your plugins:** Panda Studio hosts **VST3 and VST2** instruments and effects in their real interfaces. Their settings are saved inside the project, and any of them can take a sidechain from another mixer track. Bring your own samples too: WAV, MP3, FLAC, OGG, AIFF or M4A.
+**Your plugins:** Panda Studio hosts **VST3 and VST2** instruments and effects in their real interfaces. Their settings are saved inside the project, and any of them can take a sidechain from another mixer track. (On macOS and Linux, VST2 plugins show simple sliders instead of their own window.) Bring your own samples too: WAV, MP3, FLAC, OGG, AIFF or M4A.
 
 ---
 
@@ -147,14 +156,15 @@ Record a vocal, tune it note by note, and harmonise it, without leaving the stud
 
 |  |  |
 |---|---|
-| **6 MB installer** | Native code written in pure Rust, with no browser engine inside. |
+| **Native and light** | Written in pure Rust, with no browser engine inside: a 6 MB installer on Windows. |
 | **Three demo songs** | *Hollow Strings* (dark guitar trap, 145 BPM), *Midnight Trap* (808 slides and hi-hat rolls, 140 BPM) and *Night Drive* (124 BPM), under File › Demos. |
 | **Play it live** | MIDI keyboards, or your computer keyboard as a piano. Record straight into a pattern. |
 | **Record audio** | Arm a mixer track, pick its input and record vocals or guitar straight into the playlist, with an optional count-in. |
 | **Automation** | Right-click almost any knob to automate it, then shape the curve in the automation editor. |
 | **Export** | WAV in 16, 24 or 32-bit float at up to 96 kHz: the song, a pattern or a loop region, with optional stems per mixer track. |
 | **Never lose a song** | Automatic backup every 2 minutes, safe saving, and damaged projects repaired when they open. |
-| **Updates** | Checked once a day. Every update is signed and verified before it installs. |
+| **Three systems** | Windows, plus experimental macOS (Apple silicon and Intel) and Linux builds. Projects are the same `.panda` files everywhere. |
+| **Updates** | Checked once a day on every system. Each update is signed and verified before it installs. |
 
 ---
 
@@ -167,15 +177,27 @@ Yes. No trial, no account, no features held back. Download it and make music.
 </details>
 
 <details>
+<summary><b>Why are macOS and Linux "experimental"?</b></summary>
+<br />
+Panda Studio is made and tested day to day on Windows. The macOS and Linux versions are built from the same code with the same features, and they update themselves the same way, but they get less testing, so you're more likely to meet a rough edge there. VST2 plugins also show simple sliders instead of their own window on those systems (VST3 plugins open normally).
+</details>
+
+<details>
 <summary><b>Windows warned me about the installer. Is it safe?</b></summary>
 <br />
 The installer isn't code-signed with a paid certificate yet, so Windows SmartScreen may show "Windows protected your PC" the first time. Choose <b>More info › Run anyway</b>. Download it only from this repository's <a href="https://github.com/thePanda-X/panda-studio-releases/releases">Releases</a> page. Updates that the studio installs itself are signed and checked (size and SHA-256) before anything runs.
 </details>
 
-<details>
-<summary><b>Does it run on macOS or Linux?</b></summary>
+<details id="macos-says-panda-studio-cant-be-opened">
+<summary><b>macOS says Panda Studio can't be opened.</b></summary>
 <br />
-Not yet: Panda Studio is Windows-only for now (Windows 10 or 11, 64-bit).
+The Mac app isn't notarised by Apple yet, so macOS asks you to confirm the first time. Right-click (or Control-click) Panda Studio in Applications and choose <b>Open</b>, then <b>Open</b> again. On macOS 15 and newer, if that doesn't offer Open, try to open it once, then go to <b>System Settings › Privacy &amp; Security</b> and click <b>Open Anyway</b>. You only need to do this once: updates install without asking.
+</details>
+
+<details>
+<summary><b>The Linux AppImage doesn't start.</b></summary>
+<br />
+Make sure it's executable: <code>chmod +x PandaStudio-*.AppImage</code> (or tick "Allow executing file as program" in its properties). AppImages also need FUSE, which most desktop distributions include; if yours doesn't, see the <a href="https://docs.appimage.org/user-guide/troubleshooting/fuse.html">AppImage FUSE guide</a>. The Linux build is for x86-64 computers.
 </details>
 
 <details>
@@ -187,7 +209,10 @@ Panda Studio saves its own <code>.panda</code> projects. You can bring in audio 
 <details>
 <summary><b>How do I uninstall it?</b></summary>
 <br />
-Windows Settings › Apps › Installed apps › Panda Studio › Uninstall. Your projects stay where you saved them.
+<b>Windows:</b> Settings › Apps › Installed apps › Panda Studio › Uninstall.<br />
+<b>macOS:</b> drag Panda Studio from Applications to the Trash.<br />
+<b>Linux:</b> delete the AppImage file.<br />
+Your projects stay where you saved them.
 </details>
 
 <details>
@@ -200,7 +225,7 @@ Panda Studio itself is closed source. This repository holds its releases (the in
 
 ## About this repository
 
-- **[Releases](https://github.com/thePanda-X/panda-studio-releases/releases)**: every version of the Panda Studio installer, plus the signed `latest.json` that installed copies read to find updates.
+- **[Releases](https://github.com/thePanda-X/panda-studio-releases/releases)**: every version of Panda Studio (the Windows installer, the macOS disk image and the Linux AppImage), plus the signed update files that installed copies read to find updates (`latest.json` for Windows, `latest-macos.json`, `latest-linux.json`).
 - **The files**: the source of the Panda Studio website, a [Vite](https://vite.dev) site with plain JavaScript and CSS.
 
 <details>
@@ -237,8 +262,12 @@ After the first deploy, make `og:image` in `index.html` an absolute URL
 
 ### On each new release
 
-Edit `src/config.js`: copy `version`, `url` and `size` (into `sizeBytes`) from the studio's
-`dist/latest.json`, then push.
+Edit `PLATFORMS` in `src/config.js`, then push. Each platform has its own `version`, because a
+Windows-only release leaves macOS and Linux on their last build: copy each one's `version` and
+`size` (into `sizeBytes`; `null` hides the size) from its update file (`latest.json`,
+`latest-macos.json`, `latest-linux.json`). Download links are built from the version with the
+release script's file names. The site picks the visitor's system for its main download button;
+macOS and Linux are labelled experimental.
 
 ### Layout
 
@@ -247,7 +276,8 @@ Edit `src/config.js`: copy `version`, `url` and `size` (into `sizeBytes`) from t
     src/
       main.js               entry point: starts everything, runs the frame loop
       styles.css            all styles; the theme colours mirror src/theme.rs in the app
-      config.js             download link, version, page length in bars
+      config.js             versions and download files per platform, page length in bars
+      downloads.js          detects the visitor's system; download buttons and platform cards
       transport.js          scroll playhead, section markers, position display, tilting screenshot
       theme.js              the eight themes and the theme picker
       lib/dom.js            small helpers

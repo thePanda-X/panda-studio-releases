@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Panda Studio — a free music studio for Windows</title>
-  <meta name="description" content="Panda Studio is a free, pattern-based music studio for Windows. Step sequencer, piano roll with 808 slides, mixer, 37 effects, VST hosting, a pitch editor and a harmony generator, in a 6 MB download." />
+  <title>Panda Studio — a free music studio for Windows, macOS and Linux</title>
+  <meta name="description" content="Panda Studio is a free, pattern-based music studio for Windows, macOS and Linux. Step sequencer, piano roll with 808 slides, mixer, 37 effects, VST hosting, a pitch editor and a harmony generator." />
   <meta name="theme-color" content="#121215" />
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Panda Studio — make the beat stuck in your head" />
-  <meta property="og:description" content="A free, pattern-based music studio for Windows. 6 MB. Step sequencer, piano roll, mixer, 37 effects, VSTs, pitch editor." />
+  <meta property="og:description" content="A free, pattern-based music studio for Windows, macOS and Linux. Step sequencer, piano roll, mixer, 37 effects, VSTs, pitch editor." />
   <meta property="og:image" content="/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
@@ -48,7 +48,7 @@
       </div>
     </nav>
 
-    <a class="btn btn-accent btn-sm tp-dl" data-download href="#outro">Download</a>
+    <a class="btn btn-accent btn-sm tp-dl" data-download href="#download">Download</a>
   </header>
 
   <main id="main">
@@ -57,19 +57,19 @@
     <section class="intro" id="intro" data-sec="intro">
       <canvas id="silk" aria-hidden="true"></canvas>
       <div class="intro-inner">
-        <p class="eyebrow reveal"><span class="dot"></span> Free music studio for Windows</p>
+        <p class="eyebrow reveal"><span class="dot"></span> Free music studio<span class="eyebrow-os"> · Windows, macOS &amp; Linux</span></p>
         <h1 class="display reveal">
           <span class="line">Make the beat</span>
           <span class="line"><em>stuck in your head.</em></span>
         </h1>
         <p class="lede reveal">
           Panda Studio is a free, pattern-based music studio. Tap out drums, draw 808 slides,
-          arrange, mix, and sing over it. All of it fits in a <strong>6&nbsp;MB</strong> download.
+          arrange, mix, and sing over it. Native, light and <strong>free</strong>.
         </p>
         <div class="cta-row reveal">
-          <a class="btn btn-accent btn-lg" data-download href="#outro">
+          <a class="btn btn-accent btn-lg" data-download href="#download">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
-            Download free
+            <span data-download-label data-download-label-default="Download free">Download free</span>
           </a>
           <a class="btn btn-ghost btn-lg" href="#buildup">
             See what's inside
@@ -77,7 +77,7 @@
           </a>
         </div>
         <p class="fine reveal hero-meta">
-          <span data-version>Version 0.1.1</span> · <span data-size>5.7 MB</span> · <span>Windows 10 &amp; 11 (64-bit)</span>
+          <span data-download-meta>Windows · macOS · Linux</span> <a class="other-os" href="#download">Other systems</a>
         </p>
       </div>
       <div class="scroll-cue" aria-hidden="true"><span></span>Scroll to move the playhead</div>
@@ -123,7 +123,7 @@
           <li class="wstep" data-i="2">
             <span class="key">F5</span>
             <h3>Playlist</h3>
-            <p>Lay out patterns, audio clips and automation clips on tracks. Drop audio straight from Explorer onto the bar you want, and loop a region by right-dragging the ruler.</p>
+            <p>Lay out patterns, audio clips and automation clips on tracks. Drop audio from your file manager straight onto the bar you want, and loop a region by right-dragging the ruler.</p>
           </li>
           <li class="wstep" data-i="3">
             <span class="key">F9</span>
@@ -216,7 +216,7 @@
     <!-- ============ SPECS ============ -->
     <section class="specs" aria-label="Specifications">
       <ul class="spec-grid">
-        <li class="reveal"><b><span data-count="6">6</span><small>MB</small></b><span>installer. Native code written in pure Rust, with no browser engine inside.</span></li>
+        <li class="reveal"><b><span data-count="6">6</span><small>MB</small></b><span>Windows installer. Native code written in pure Rust, with no browser engine inside.</span></li>
         <li class="reveal"><b><span data-count="125">125</span></b><span>mixer inserts, each with ten effect slots, sends and sidechain.</span></li>
         <li class="reveal"><b><span data-count="37">37</span></b><span>built-in effects, from Room Reverb to Grain Cloud.</span></li>
         <li class="reveal"><b>2<small>min</small></b><span>between automatic backups, so a crash doesn't cost you the song.</span></li>
@@ -231,15 +231,38 @@
       <div class="outro-inner">
         <p class="marker reveal">Outro<span>bar 16</span></p>
         <h2 class="display reveal">Your <em>turn.</em></h2>
-        <a class="btn btn-accent btn-xl reveal" data-download id="dlMain" href="#">
+        <a class="btn btn-accent btn-xl reveal outro-dl" data-download href="#download">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
-          Download Panda Studio
+          <span data-download-label data-download-label-default="Download Panda Studio">Download Panda Studio</span>
         </a>
-        <p class="dl-meta reveal">
-          <span data-version>Version 0.1.1</span> · <span data-size>5.7 MB</span> · Windows 10 &amp; 11 (64-bit) · No admin rights needed
+        <p class="dl-meta reveal outro-dl-meta" data-download-meta>Windows · macOS · Linux</p>
+
+        <div class="platforms" id="download">
+          <article class="platform reveal" data-os="windows">
+            <div class="platform-head"><span class="platform-icon"></span><h3>Windows</h3></div>
+            <p class="platform-req"></p>
+            <p class="platform-how">Run the installer. No admin rights needed: it adds Start menu and desktop shortcuts and opens <code>.panda</code> projects.</p>
+            <div class="platform-foot"><span class="platform-meta"></span><a class="btn btn-ghost btn-sm platform-dl" href="#">Download</a></div>
+          </article>
+          <article class="platform reveal" data-os="macos">
+            <div class="platform-head"><span class="platform-icon"></span><h3>macOS</h3><span class="badge-exp">Experimental</span></div>
+            <p class="platform-req"></p>
+            <p class="platform-how">Open the disk image and drag Panda Studio into Applications. The first time, right-click it and choose <b>Open</b>. On macOS 15 and newer, use <b>System Settings › Privacy &amp; Security › Open Anyway</b>.</p>
+            <div class="platform-foot"><span class="platform-meta"></span><a class="btn btn-ghost btn-sm platform-dl" href="#">Download</a></div>
+          </article>
+          <article class="platform reveal" data-os="linux">
+            <div class="platform-head"><span class="platform-icon"></span><h3>Linux</h3><span class="badge-exp">Experimental</span></div>
+            <p class="platform-req"></p>
+            <p class="platform-how">One file that runs on most distributions: make it executable (<code>chmod +x</code>) and open it. Sound goes through ALSA, PipeWire or PulseAudio.</p>
+            <div class="platform-foot"><span class="platform-meta"></span><a class="btn btn-ghost btn-sm platform-dl" href="#">Download</a></div>
+          </article>
+        </div>
+
+        <p class="fine reveal platform-note">
+          Panda Studio is made and tested on Windows. The macOS and Linux versions are <b>experimental</b>: same studio,
+          same features, but expect some rough edges (and VST2 plugins show simple sliders there instead of their own window).
+          Updates are signed and install themselves on all three. <a id="dlAll" href="#">All versions</a>
         </p>
-        <p class="fine reveal">The installer adds Start menu and desktop shortcuts and opens <code>.panda</code> project files. Uninstall it any time from Windows Settings.
-          <a id="dlAll" href="#">All versions</a></p>
       </div>
     </section>
   </main>
