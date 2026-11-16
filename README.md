@@ -1,5 +1,5 @@
 <p align="center">
-  <img src=".github/readme/banner.webp" alt="Panda Studio — Make the beat stuck in your head." width="100%" />
+  <img src=".github/readme/banner.webp" alt="Panda Studio — Music made free and accessible." width="100%" />
 </p>
 
 <p align="center">
