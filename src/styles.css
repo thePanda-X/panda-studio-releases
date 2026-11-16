@@ -448,6 +448,17 @@ section { position: relative; }
 .outro-inner { display: flex; flex-direction: column; align-items: center; }
 .outro .display { font-size: clamp(4rem, 16vw, 15rem); margin: 40px 0 48px; }
 .outro .marker::after { left: 50%; }
+/* The logo sits behind "Your turn" and drops in from above, swinging round to face you (vars set in spin.js). */
+.outro-title { position: relative; isolation: isolate; perspective: 900px; }
+.outro-logo {
+  position: absolute; left: 50%; top: 50%; z-index: -1;
+  width: clamp(12rem, 34vw, 28rem); height: auto; pointer-events: none;
+  opacity: var(--o, .22); translate: -50% -50%;
+  transform: translateY(var(--y, 0)) rotateX(var(--tilt, 0deg));
+  will-change: transform, opacity;
+}
+/* Keep what follows the headline above the logo, which hangs down past it. */
+.outro-dl, .outro-dl-meta { position: relative; z-index: 1; }
 .dl-meta { margin: 20px 0 8px; font: 400 13px var(--mono); color: var(--dim); }
 .outro .fine { margin-inline: auto; }
 
@@ -513,6 +524,7 @@ section { position: relative; }
   .reveal { opacity: 1; transform: none; }
   .stage-frame { transform: none !important; }
   .mq-row { animation: none; }
+  .outro-logo { transform: none; opacity: .22; }
   .grain { display: none; }
 }
 .voice figure img { width: 100%; }

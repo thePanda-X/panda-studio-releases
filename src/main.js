@@ -10,6 +10,7 @@ import { initScope, drawScope } from "./visuals/scope.js";
 import { initWindows } from "./sections/windows.js";
 import { initMarquee } from "./sections/marquee.js";
 import { initReveal } from "./sections/reveal.js";
+import { initSpin } from "./sections/spin.js";
 
 initDownloads();
 initThemes(); // first, so the canvases start with the saved theme's colours
@@ -19,6 +20,7 @@ initScope();
 initWindows();
 initMarquee();
 initReveal();
+initSpin();
 
 function frame(time) {
   const t = reduceMotion ? 0 : time;
