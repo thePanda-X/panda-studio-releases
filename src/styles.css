@@ -131,7 +131,7 @@ em { font-family: var(--serif); font-style: italic; font-weight: 400; color: var
   transition: background-color .6s;
 }
 .brand { display: flex; align-items: center; gap: 8px; color: var(--text); text-decoration: none; font-weight: 600; font-size: 16px; white-space: nowrap; }
-.brand img { border-radius: 6px; }
+.brand img { display: block; }
 .tp-controls { display: flex; align-items: center; gap: 8px; }
 
 .lcd {
