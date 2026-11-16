@@ -1,5 +1,5 @@
 // Outro background: the studio's master oscilloscope, big, drawing a slow idle wave.
-// It runs behind the "Your turn." headline, whatever else the section holds.
+// It runs behind the "Your turn" headline, whatever else the section holds.
 import { $, clamp } from "../lib/dom.js";
 import { colors } from "../theme.js";
 import { makeCanvas } from "./canvas.js";

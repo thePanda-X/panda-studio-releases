@@ -10,14 +10,14 @@
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Panda Studio — make the beat stuck in your head" />
+  <meta property="og:title" content="Panda Studio — music made free and accessible" />
   <meta property="og:description" content="A free, pattern-based music studio for Windows, macOS and Linux. Step sequencer, piano roll, mixer, 37 effects, VSTs, pitch editor." />
   <meta property="og:image" content="/og.png" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="preload" as="image" href="./src/assets/shots/full.webp" />
 </head>
 <body>
@@ -57,10 +57,9 @@
     <section class="intro" id="intro" data-sec="intro">
       <canvas id="silk" aria-hidden="true"></canvas>
       <div class="intro-inner">
-        <p class="eyebrow reveal"><span class="dot"></span> Free music studio<span class="eyebrow-os"> · Windows, macOS &amp; Linux</span></p>
         <h1 class="display reveal">
-          <span class="line">Make the beat</span>
-          <span class="line"><em>stuck in your head.</em></span>
+          <span class="line">Music made</span>
+          <span class="line"><em>free <span class="plain">and</span> accessible</em></span>
         </h1>
         <p class="lede reveal">
           Panda Studio is a free, pattern-based music studio. Tap out drums, draw 808 slides,
@@ -99,7 +98,7 @@
     <section class="buildup" id="buildup" data-sec="buildup">
       <div class="sec-head">
         <p class="marker reveal">Build-up<span>bar 5</span></p>
-        <h2 class="h2 reveal">Every idea gets <em>its own window.</em></h2>
+        <h2 class="h2 reveal">Every idea gets <em>its own window</em></h2>
       </div>
 
       <div class="windows">
@@ -111,22 +110,22 @@
         </div>
         <ol class="win-steps">
           <li class="wstep" data-i="0">
-            <span class="key">F6</span>
+            <span class="step"><b>1</b>Make a beat</span>
             <h3>Channel rack</h3>
             <p>Sketch the groove in the step sequencer: 16, 32 or 64 steps, swing, and 21 built-in drums including a trap kit. Mute, solo, pan and route each channel, and shape velocity and panning per step in the graph editor.</p>
           </li>
           <li class="wstep" data-i="1">
-            <span class="key">F7</span>
+            <span class="step"><b>2</b>Add a melody</span>
             <h3>Piano roll</h3>
             <p>Draw, paint, slice and strum notes. Use chord stamps and scale highlighting, and draw slide notes that bend a long 808 into the next pitch.</p>
           </li>
           <li class="wstep" data-i="2">
-            <span class="key">F5</span>
+            <span class="step"><b>3</b>Build the song</span>
             <h3>Playlist</h3>
             <p>Lay out patterns, audio clips and automation clips on tracks. Drop audio from your file manager straight onto the bar you want, and loop a region by right-dragging the ruler.</p>
           </li>
           <li class="wstep" data-i="3">
-            <span class="key">F9</span>
+            <span class="step"><b>4</b>Mix it</span>
             <h3>Mixer</h3>
             <p>Up to 125 inserts with ten effect slots each, sends, sidechain routing and a built-in 3-band EQ. Each strip has peak meters with hold and a clip light.</p>
           </li>
@@ -139,7 +138,7 @@
       <div class="drop-flash" aria-hidden="true"></div>
       <div class="sec-head center">
         <p class="marker reveal">Drop<span>bar 9</span></p>
-        <h2 class="h2 huge reveal">37 effects.<br/><em>Nine instruments.</em><br/>Your plugins too.</h2>
+        <h2 class="h2 huge reveal">37 effects<br/><em>Nine instruments</em><br/>Your plugins too</h2>
       </div>
 
       <div class="marquee" aria-hidden="true">
@@ -158,8 +157,26 @@
           <h3>Effects you can see</h3>
           <p>Saturator curves, EQ responses, compressors with gain reduction. Tempo-synced delays, Trance Gate, Tape Stop, Grain Cloud and Half Time are in there too.</p>
         </article>
-        <article class="card card-text reveal">
-          <div class="vst-badge"><span>VST3</span><span>VST2</span></div>
+        <article class="card reveal">
+          <div class="card-shot byo" aria-hidden="true">
+            <div class="byo-panel">
+              <p class="byo-head">Plugins</p>
+              <ul class="byo-list">
+                <li><i class="byo-ic inst"></i>Analog synth<span>VST3</span></li>
+                <li><i class="byo-ic fx"></i>Vintage plate reverb<span>VST3</span></li>
+                <li><i class="byo-ic fx"></i>Tape EQ<span>VST2</span></li>
+              </ul>
+              <p class="byo-head">Samples</p>
+              <ul class="byo-list">
+                <li><i class="byo-ic file"></i>808_glide.flac</li>
+                <li class="byo-ghost"><i class="byo-ic file"></i>vox_take_03.wav</li>
+              </ul>
+            </div>
+            <div class="byo-drag">
+              <span><i class="byo-ic file"></i>vox_take_03.wav</span>
+              <svg viewBox="0 0 192 24" preserveAspectRatio="none"><path d="M1 10.2v3.6M4 9.2v5.7M7 9.1v5.8M10 8.8v6.3M13 8.3v7.5M16 7.3v9.5M19 6.9v10.2M22 6.8v10.3M25 6.8v10.3M28 7.4v9.2M31 6.0v12.0M34 6.8v10.5M37 4.3v15.5M40 6.5v11.0M43 5.4v13.2M46 6.4v11.2M49 4.8v14.5M52 4.5v15.0M55 3.8v16.5M58 3.9v16.1M61 5.3v13.5M64 5.5v13.1M67 5.2v13.6M70 2.5v19.0M73 5.6v12.8M76 2.9v18.2M79 5.4v13.2M82 5.1v13.8M85 4.6v14.8M88 2.8v18.3M91 3.3v17.4M94 4.0v16.0M97 4.8v14.3M100 5.5v12.9M103 3.7v16.7M106 5.3v13.3M109 2.8v18.4M112 6.0v12.0M115 5.4v13.2M118 6.2v11.7M121 4.6v14.8M124 5.1v13.8M127 4.8v14.5M130 5.5v12.9M133 6.8v10.4M136 6.7v10.6M139 7.0v10.1M142 5.8v12.5M145 7.8v8.5M148 7.0v10.0M151 8.3v7.3M154 8.3v7.4M157 8.7v6.7M160 8.7v6.7M163 9.4v5.1M166 10.2v3.6M169 10.2v3.6M172 10.2v3.6M175 10.2v3.6M178 10.2v3.6M181 10.2v3.6M184 10.2v3.6M187 10.2v3.6M190 10.2v3.6"/></svg>
+            </div>
+          </div>
           <h3>Bring your own sounds</h3>
           <p>Panda Studio hosts VST3 and VST2 instruments and effects in their real interfaces. Their settings are saved inside the project, and any of them can take a sidechain from another mixer track.</p>
           <p class="muted">You can also drop in your own WAV, MP3, FLAC, OGG, AIFF or M4A samples.</p>
@@ -171,7 +188,7 @@
     <section class="bridge" id="bridge" data-sec="bridge">
       <div class="sec-head">
         <p class="marker reveal">Bridge<span>bar 12</span></p>
-        <h2 class="h2 reveal">Then you <em>sing.</em></h2>
+        <h2 class="h2 reveal">Then you <em>sing</em></h2>
         <p class="body reveal">Record a vocal, tune it note by note, and harmonise it, without leaving the studio.</p>
       </div>
 
@@ -202,7 +219,7 @@
       <div class="colour-inner">
         <div class="sec-head">
           <p class="marker reveal">Colour<span>bar 14</span></p>
-          <h2 class="h2 reveal">Pick a <em>mood.</em></h2>
+          <h2 class="h2 reveal">Pick a <em>mood</em></h2>
           <p class="body reveal">Eight themes, four dark and four light, and the studio remembers your choice. Try one: this page changes with it.</p>
           <div class="swatches reveal" id="swatches" role="radiogroup" aria-label="Theme"></div>
         </div>
@@ -230,7 +247,7 @@
       <canvas id="outroWave" aria-hidden="true"></canvas>
       <div class="outro-inner">
         <p class="marker reveal">Outro<span>bar 16</span></p>
-        <h2 class="display reveal">Your <em>turn.</em></h2>
+        <h2 class="display reveal">Your <em>turn</em></h2>
         <a class="btn btn-accent btn-xl reveal outro-dl" data-download href="#download">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
           <span data-download-label data-download-label-default="Download Panda Studio">Download Panda Studio</span>
