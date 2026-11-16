@@ -22,16 +22,30 @@ function fmtPos(bars) {
 /** Place each marker on the ruler where its section is on the page. */
 function layoutRuler() {
   docMax = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+  rulerLinks.forEach((a) => a.classList.remove("tight", "flip")); // measure labels at full size
   rulerLinks.forEach((a) => {
     const sec = document.getElementById(a.dataset.sec);
     if (!sec) return;
-    const at = clamp((sec.offsetTop - innerHeight * 0.25) / docMax, 0, 0.94);
-    a.style.setProperty("--at", a.dataset.sec === "intro" ? 0 : at);
+    // Snap each marker to the nearest bar line, like markers in the studio.
+    const raw = clamp((sec.offsetTop - innerHeight * 0.25) / docMax, 0, 1);
+    const at = a.dataset.sec === "intro" ? 0 : clamp(Math.round(raw * SONG_BARS), 1, SONG_BARS - 1) / SONG_BARS;
+    a.style.setProperty("--at", at);
+    // Hang the flag to the left of its line only when it would run past the end of the track.
+    const w = a.parentElement.clientWidth;
+    a.classList.toggle("flip", at * w + a.offsetWidth > w - 4);
+  });
+  // Where a label would run into the next marker, it folds down to just its line
+  // (the current section always keeps its label).
+  const box = (a) => { const r = a.getBoundingClientRect(); return [r.left, r.right]; };
+  rulerLinks.forEach((a, i) => {
+    const b = rulerLinks[i + 1];
+    if (b && box(a)[1] + 6 > box(b)[0]) a.classList.add("tight");
   });
 }
 
 const moveHead = (frac) => {
   rulerHead.style.transform = `translateX(${frac * rulerHead.parentElement.clientWidth}px)`;
+  rulerHead.parentElement.style.setProperty("--p", frac.toFixed(4));
 };
 
 function onScroll() {
