@@ -37,5 +37,8 @@ export const PLATFORMS = {
 export const downloadUrl = (p) => `${REPO}/releases/download/v${p.version}/${p.file(p.version)}`;
 export const RELEASES_PAGE = `${REPO}/releases`;
 
+// Where the "Support on Ko-fi" links go.
+export const KOFI_URL = "https://ko-fi.com/pandaxiro";
+
 // The page is laid out like a song this many bars long: scrolling to the bottom reaches its end.
 export const SONG_BARS = 16;

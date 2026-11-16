@@ -502,6 +502,17 @@ section { position: relative; }
 .platform-note b { color: var(--text); font-weight: 500; }
 @media (max-width: 900px) { .platforms { grid-template-columns: 1fr; max-width: 30rem; } }
 
+/* ---------- support ---------- */
+.support {
+  display: flex; flex-direction: column; align-items: center; gap: 16px;
+  margin-top: 48px; padding-top: 40px; border-top: 1px solid var(--hair); width: min(36rem, 100%);
+}
+.support p { margin: 0; color: var(--dim); font-size: 15px; }
+.support-btn svg { color: var(--accent); }
+.support-btn:hover svg { fill: currentColor; }
+.foot a { color: inherit; margin-left: 8px; text-underline-offset: 3px; }
+.foot a:hover { color: var(--accent); }
+
 .foot {
   display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;
   padding: 24px clamp(20px, 6vw, 96px); border-top: 1px solid var(--hair); color: var(--dim); font-size: 13px;
